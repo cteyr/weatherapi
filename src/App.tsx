@@ -1,8 +1,16 @@
-// @ts-ignore
-import logo from "./assets/images/logo-react.png";
-import { MainContainer } from "./containers/MainContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainLayout } from "./layouts/MainLayout";
+import { WeatherForecastContainer } from "./containers/WeatherForecastContainer";
 
 const App = () => {
-  return <MainContainer />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<WeatherForecastContainer />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 export { App };
