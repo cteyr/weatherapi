@@ -1,7 +1,17 @@
 .WeatherForecastContainer {
-  display: flex;
   height: 75%;
-  width: 95%;
+  width: 80%;
+  padding: 0rem 2rem;
   margin-top: 4.5rem;
-  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1rem;
+  flex: 1;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+  .color {
+    background-color: red;
+    border-radius: 10px;
+  }
 }
