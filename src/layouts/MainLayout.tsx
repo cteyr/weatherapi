@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
-import { useEffect } from "react";
 import { useClimate } from "../hooks/useClimate";
 
 const MainLayout = () => {
