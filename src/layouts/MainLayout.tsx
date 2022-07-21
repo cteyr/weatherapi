@@ -4,10 +4,7 @@ import { useEffect } from "react";
 import { useClimate } from "../hooks/useClimate";
 
 const MainLayout = () => {
-  const { getAllClimate, setClimate, Latitud, Climate } = useClimate();
-  useEffect(() => {
-    getAllClimate();
-  }, [Latitud]);
+  const { Climate } = useClimate();
 
   return (
     <div className="layout">

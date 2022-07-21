@@ -1,14 +1,7 @@
-import { Climate } from "../types/Climate";
-import { useEffect } from "react";
 import { useClimate } from "../hooks/useClimate";
 
 const WeatherForecastContainer = () => {
-  const { getAllClimate, setClimate, Latitud, Climate } = useClimate();
-
-  useEffect(() => {
-    getAllClimate();
-  }, [Latitud]);
-  console.log(Climate);
+  const { Climate } = useClimate();
 
   return (
     <div className="WeatherForecastContainer">
