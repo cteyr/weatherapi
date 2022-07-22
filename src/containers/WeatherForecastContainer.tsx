@@ -1,5 +1,5 @@
 import { useClimate } from "../hooks/useClimate";
-import { BsMoon } from "react-icons/bs";
+import { RiMoonFill } from "react-icons/ri";
 
 const WeatherForecastContainer = () => {
   const { Climate } = useClimate();
@@ -35,7 +35,7 @@ const WeatherForecastContainer = () => {
           <div className="body-climate">
             <div className="icon">
               {Climate?.forecast.forecastday[0].hour[0].condition.text ===
-                "Clear" && <BsMoon size={65} color="#1976d2" />}
+                "Clear" && <RiMoonFill size={65} color="#1976d2" />}
             </div>
             <div className="text-climate">
               <h4>{Climate?.forecast.forecastday[0].hour[0].condition.text}</h4>
