@@ -1,8 +1,6 @@
 .layout {
   display: flex;
   flex-direction: column;
-  //align-items: center;
-  //justify-content: center;
   height: 100vh;
   width: 100vw;
 
@@ -16,7 +14,6 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: white;
-    // padding: 2rem 4rem;
+    background-color: hsl(0, 0%, 98%);
   }
 }
