@@ -702,15 +702,15 @@ export type Climate={
                         uv: number
                     },
                     {
-                        "time_epoch": 1658412000,
-                        "time": "2022-07-21 16:00",
-                        "temp_c": 29.9,
-                        "temp_f": 85.8,
-                        "is_day": 1,
-                        "condition": {
-                            "text": "Partly cloudy",
-                            "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
-                            "code": 1003
+                        time_epoch: number,
+                        time: string,
+                        temp_c: number,
+                        temp_f: number,
+                        is_day: number,
+                        condition: {
+                            text: string,
+                            icon: string,
+                            code: number
                         },
                         "wind_mph": 6.5,
                         "wind_kph": 10.4,
