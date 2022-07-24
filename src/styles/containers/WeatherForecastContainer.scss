@@ -17,55 +17,5 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     gap: 1rem;
-
-    .climate {
-      background-color: white;
-      border-radius: 10px;
-      padding-bottom: 2rem;
-      .time-climate {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 4rem;
-        width: 100%;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        font-size: 2rem;
-        background-color: #1976d2;
-        color: white;
-      }
-      .body-climate {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-        .icon {
-          margin-top: 2rem;
-        }
-
-        .text-climate {
-          margin-top: 0.5rem;
-
-          h4 {
-            font-weight: lighter;
-            color: #1976d2;
-          }
-        }
-
-        .temperature-climate {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          margin-top: 0.5rem;
-          h5 {
-            font-size: 2rem;
-            color: #1976d2;
-          }
-        }
-      }
-    }
   }
 }

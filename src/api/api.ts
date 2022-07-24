@@ -1,6 +1,6 @@
 import { Climate } from "../types/Climate";
 
-const BASE_API_URL="http://api.weatherapi.com/v1/forecast.json";
+const BASE_API_URL="https://api.weatherapi.com/v1/forecast.json";
 
 const request = async (
     latitud: number,
