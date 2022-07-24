@@ -1,12 +1,12 @@
 import { useClimate } from "../hooks/useClimate";
-import { RiMoonFill } from "react-icons/ri";
+import { InfoClimate } from "../components/InfoClimate";
 
 const WeatherForecastContainer = () => {
   const { Climate } = useClimate();
 
-  const getHour = (hour_number: number) => {
-    const hour =
-      Climate?.forecast.forecastday[0].hour[hour_number].time.split(" ");
+  const getHour = (number: number) => {
+    const hour = Climate?.forecast.forecastday[0].hour[number].time.split(" ");
+
     return hour?.[1];
   };
 
@@ -22,7 +22,6 @@ const WeatherForecastContainer = () => {
   ];
   const numeroDia = new Date(fechaComoCadena).getDay();
   const nombreDia = dias[numeroDia];
-  console.log(Climate?.forecast.forecastday[0].hour[0].condition.text);
 
   return (
     <div className="Container">
@@ -30,26 +29,12 @@ const WeatherForecastContainer = () => {
         <h1>Weather Forecast for {nombreDia}</h1>
       </div>
       <div className="WeatherForecastContainer">
-        <div className="climate">
-          <div className="time-climate">{getHour(0)}</div>
-          <div className="body-climate">
-            <div className="icon">
-              {Climate?.forecast.forecastday[0].hour[0].condition.text ===
-                "Clear" && <RiMoonFill size={65} color="#1976d2" />}
-            </div>
-            <div className="text-climate">
-              <h4>{Climate?.forecast.forecastday[0].hour[0].condition.text}</h4>
-            </div>
-            <div className="temperature-climate">
-              <h5>{Climate?.forecast.forecastday[0].hour[0].temp_c} °C</h5>
-            </div>
-          </div>
-        </div>
-        <div className="climate"></div>
-        <div className="climate">sdas</div>
-        <div className="climate">sdas</div>
-        <div className="climate">sdas</div>
-        <div className="climate">sdas</div>
+        <InfoClimate time={() => getHour(0)} hour={0} climate={Climate} />
+        <InfoClimate time={() => getHour(5)} hour={5} climate={Climate} />
+        <InfoClimate time={() => getHour(10)} hour={10} climate={Climate} />
+        <InfoClimate time={() => getHour(15)} hour={15} climate={Climate} />
+        <InfoClimate time={() => getHour(20)} hour={20} climate={Climate} />
+        <InfoClimate time={() => getHour(23)} hour={23} climate={Climate} />
       </div>
     </div>
   );

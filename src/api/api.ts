@@ -1,5 +1,4 @@
 import { Climate } from "../types/Climate";
-import {useState}from "react"
 
 const BASE_API_URL="http://api.weatherapi.com/v1/forecast.json";
 
